@@ -16,10 +16,6 @@ const ll INF=__LONG_LONG_MAX__;
 
 
 
-void ans(){
-    //freopen("input.txt","r",stdin);
-    //freopen("output.txt","w",stdout);
-}
 
 class Solution {
 public:
@@ -47,10 +43,6 @@ int main(){
   ios::sync_with_stdio(false);cin.tie(0);
     int t=1,a=1;
     vector<int>nums={2,2,2,2,2};
-    //cin>>t;
-    // while(t--){
-    //     ans();
-    // }
     Solution solution;
     auto b=solution.ans1(nums);
     cout<<b<<endl;
