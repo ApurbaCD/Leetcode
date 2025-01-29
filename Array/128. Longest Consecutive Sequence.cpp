@@ -1,19 +1,16 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define ll                long long int 
-#define ull               unsigned long long int 
-//#define vec             vector<int>
-//copy from Mrinal da
-#define vec               vector<ll>
-#define vsort(v)          sort(v.begin(),v.end())
-#define endline           cout<<"\n"
-#define yes               cout<<"YES\n"
-#define no                cout<<"NO\n"
-#define loop(i,a,b)       for(ll i=a;i<=b;i++)
-#define loop1(i,a,b)      for(ll i=a;i>=b;i--)
-const ll siz=2e5+7;
-const ll INF=__LONG_LONG_MAX__;
 
+
+#define ll         long long int 
+#define ld         long double
+#define all(a)     (a).begin(), (a).end()
+#define vec        vector<long long int>
+#define sort1(v)   sort(v.begin(),v.end())
+#define endline    cout<<"\n";
+const int MAX_N = 1e5 + 5;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
 
 class Solution {
 public:
