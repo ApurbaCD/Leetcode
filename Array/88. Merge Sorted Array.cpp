@@ -15,32 +15,28 @@ const ll siz=2e5+7;
 const ll INF=__LONG_LONG_MAX__;
 
 
-
-
 class Solution {
 public:
-    int ans1(vector<int>nums) {
-      map<int,int>mp;
-      int n=nums.size();
-      int n1=n/2;
-      for(int i=0;i<n;i++){
-        mp[nums[i]]++;
-      }
-      for(auto x:mp){
-        if(x.second>n1)return x.first;
-      }
-      return 0;
+    vector<int> ans1(vector<int>nums1,int m,vector<int>nums2,int n) {
+
+        for(int i=m;i<m+n;i++){
+            nums1[i]=nums2[i-m];
+        }
+        sort(nums1.begin(),nums1.end());
+        return nums1;
     }
 };
 
 
 int main(){
-  ios::sync_with_stdio(false);cin.tie(0);
-    int t=1,a=1;
-    vector<int>nums={3,2,3};
+    ios::sync_with_stdio(false);cin.tie(0);
+    int t=1,a=1,m=3,n=3;
+    vector<int>nums1={1,2,3,0,0,0},nums2={2,5,6};
     Solution solution;
-    auto b=solution.ans1(nums);
-    cout<<b<<endl;
+    auto b=solution.ans1(nums1,m,nums2,n);
+    for(auto x:b){
+        cout<<x<<" ";
+    }
 }
 
-// https://leetcode.com/problems/majority-element/description/
+//https://leetcode.com/problems/merge-sorted-array/submissions/1522979676/

@@ -15,32 +15,35 @@ const ll siz=2e5+7;
 const ll INF=__LONG_LONG_MAX__;
 
 
-
-
 class Solution {
 public:
-    int ans1(vector<int>nums) {
-      map<int,int>mp;
-      int n=nums.size();
-      int n1=n/2;
-      for(int i=0;i<n;i++){
-        mp[nums[i]]++;
-      }
-      for(auto x:mp){
-        if(x.second>n1)return x.first;
-      }
-      return 0;
+    vector<int> ans1(vector<int>nums) {
+        int n=nums.size(),j=0;
+        vector<int>tmp(n,0);
+        for(int i=0;i<n;i++){
+            if(nums[i]){
+                tmp[j]=nums[i];
+                j++;
+            }
+        }
+        for(int i=0;i<n;i++){
+            nums[i]=tmp[i];
+        }
+        return nums;
     }
 };
 
 
 int main(){
-  ios::sync_with_stdio(false);cin.tie(0);
+    ios::sync_with_stdio(false);cin.tie(0);
     int t=1,a=1;
-    vector<int>nums={3,2,3};
+    vector<int>nums={0,1,0,3,12};
     Solution solution;
     auto b=solution.ans1(nums);
-    cout<<b<<endl;
+    for(auto x:b){
+        cout<<x<<" ";
+    }
+    //cout<<b<<endl;
 }
 
-// https://leetcode.com/problems/majority-element/description/
+//https://leetcode.com/problems/move-zeroes/description/

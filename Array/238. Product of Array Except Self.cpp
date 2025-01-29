@@ -15,32 +15,24 @@ const ll siz=2e5+7;
 const ll INF=__LONG_LONG_MAX__;
 
 
-
-
 class Solution {
 public:
     int ans1(vector<int>nums) {
-      map<int,int>mp;
-      int n=nums.size();
-      int n1=n/2;
-      for(int i=0;i<n;i++){
-        mp[nums[i]]++;
-      }
-      for(auto x:mp){
-        if(x.second>n1)return x.first;
-      }
-      return 0;
+        int n=nums.size(),mx=0,c=0,pre;
+        sort(nums.begin(),nums.end());
+        pre=nums[0];
+        for(int i=0;i<n;i++){
+        
+        }
     }
 };
 
 
 int main(){
-  ios::sync_with_stdio(false);cin.tie(0);
+    ios::sync_with_stdio(false);cin.tie(0);
     int t=1,a=1;
-    vector<int>nums={3,2,3};
+    vector<int>nums={100,4,200,1,3,2};
     Solution solution;
     auto b=solution.ans1(nums);
     cout<<b<<endl;
 }
-
-// https://leetcode.com/problems/majority-element/description/
